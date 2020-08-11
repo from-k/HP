@@ -1,0 +1,33 @@
+<footer>
+  <div class="container">
+    <div class="flex">
+      <div class="left">
+        <%= image_tag "logo2.png", width: 220%>
+        <ul class="footer_nav">
+          <li>
+            <%= link_to root_path do %>
+              <span>▶︎ </span>HOME
+            <% end %>
+          </li>
+          <li>
+            <%= link_to about_path do %>
+              <span>▶︎ </span>from Kとは
+            <% end %>
+          </li>
+          <li>
+            <%= link_to activity_path do %>
+              <span>▶︎ </span>活動内容
+            <% end %>
+          </li>
+          <li>
+            <%= link_to event_path do %>
+              <span>▶︎ </span>活動実績
+            <% end %>
+          </li>
+        </ul>
+    </div>
+    <div class="right">
+      <a class="twitter-timeline" data-width="400" data-height="490" href="https://twitter.com/KU_fromK?ref_src=twsrc%5Etfw">Tweets by KU_fromK</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </div>
+</footer>

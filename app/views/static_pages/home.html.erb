@@ -1,2 +1,143 @@
-<h1>これまつ大魔王</h1>
-<p>僕はこれまつ大魔王だ！！</p>
+<div id="home" class="main">
+  <div class="top_view">
+    <h1 class="mincho">就活の輪をつくり、
+    <br>将来の選択肢を提供して視野を広げる</h1>
+  </div>
+
+  <div class="event">
+    <div class="container">
+      <h2 class="section_title">
+        EVENT<span>活動実績</span>
+      </h2>
+      <ul class="event_list row">
+        <li class="col-md-4">
+          <div class="event_image">
+            <%= image_tag "noimage.png" %>
+          </div>
+          <div class="flex">
+            <div class="tag tag_event">
+              イベント
+            </div>
+            <div class="date">
+              2020.07.01
+            </div>
+          </div>
+          <div class="event_title">
+            就活なんでも相談会
+          </div>
+        </li>
+        <li class="col-md-4">
+          <div class="event_image">
+            <%= image_tag "event2.png" %>
+          </div>
+          <div class="flex">
+            <div class="tag tag_event">
+              イベント
+            </div>
+            <div class="date">
+              2020.01.24
+            </div>
+          </div>
+          <div class="event_title">
+            東京就活考えている人が集まる会、大手企業志望者が集まる会
+          </div>
+        </li>
+        <li class="col-md-4">
+          <div class="event_image">
+            <%= image_tag "event3.png" %>
+            <a href="#"></a>
+          </div>
+          <div class="flex">
+            <div class="tag tag_event">
+              イベント
+            </div>
+            <div class="date">
+              2019.12.14
+            </div>
+          </div>
+          <div class="event_title">
+            内定者交流会
+          </div>
+        </li>
+      </ul>
+      <a href="#" class="btn_more">View more<span>＞</span></a>
+    </div>
+  </div>
+
+  <div class="about">
+    <div class="container">
+      <h2 class="section_title">
+        ABOUT<span>from Kとは</span>
+      </h2>
+    </div>
+    <div class="about_content">
+      <%= image_tag "bg_about_sp.png", class: "sp_only" %>
+      <div class="container clearfix">
+        <p>『就活の輪をつくり、将来の選択肢を提供して視野を広げる。』
+        <br>という団体理念のもと活動している金沢大学就職支援室公認の学生団体です。</p>
+        <a href="#" class="btn_more">View more<span>＞</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="container">
+      <h2 class="section_title">
+        ACTIVYTY<span>活動内容</span>
+      </h2>
+    </div>
+    <ul class="activity_list">
+      <li class="activity1">
+        <div class="left">
+          <div class="activity_img">
+            <%= image_tag "activity1.png" %>
+          </div>
+        </div>
+        <div class="right">
+          <h3 class="activity_name">就活イベントの企画運営</h3>
+          <p>就活生や学部1~2年生に向けて、就活に役立つようなイベントを学生主体で企画・実施しています。</p>
+          <%= link_to activity_path, class: "btn_more" do %>
+            View more<span>＞</span>
+          <% end %>
+        </div>
+      </li>
+      <li class="activity2">
+        <div class="left">
+          <div class="activity_img">
+            <%= image_tag "activity2.png" %>
+          </div>
+        </div>
+        <div class="right">
+          <h3 class="activity_name">就活に関する情報の発信</h3>
+          <p>TwitterやLINEグループを通して、就活情報を発信しています。</p>
+          <%= link_to activity_path, class: "btn_more" do %>
+            View more<span>＞</span>
+          <% end %>
+        </div>
+      </li>
+      <li class="activity3">
+        <div class="left">
+          <div class="activity_img">
+            <%= image_tag "activity3.png" %>
+          </div>
+        </div>
+        <div class="right">
+          <h3 class="activity_name">企業と学生の接点づくり</h3>
+          <p>選択肢を提供し、学生に視野を広げてもらうために企業と連携したイベント開催やOB・OG訪問を気軽にできるプラットフォームを作っています。</p>
+          <%= link_to activity_path, class: "btn_more" do %>
+            View more<span>＞</span>
+          <% end %>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="contact">
+    <div class="container">
+      <h2 class="section_title">
+        CONTACT<span>お問い合わせ</span>
+      </h2>
+    </div>
+    <%= render "static_pages/contact_area" %>
+  </div>
+</div>

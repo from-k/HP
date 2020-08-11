@@ -1,3 +1,310 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// top
+
+
+#home {
+  .top_view {
+    height: 650px;
+    margin-bottom: 150px;
+    background-image: url(bg_top.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    h1 {
+      padding-top: 200px;
+      font-size: 46px;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+      line-height: 78px;
+    }
+  }
+
+  .section_title {
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: normal;
+
+    span {
+      padding-left: 20px;
+      font-size: 24px;
+      color: $blue;
+      vertical-align: baseline;
+    }
+  }
+
+  .event {
+    margin-bottom: 170px;
+
+    .event_list {
+      margin-bottom: 70px;
+
+      li {
+        .event_image {
+          margin-bottom: 14px;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .flex {
+          margin-bottom: 20px;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .event_title {
+          font-size: 22px;
+        }
+        .tag {
+          padding: 5px 15px;
+          font-size: 14px;
+        }
+
+        .tag_event {
+          color : #707070;
+          border: 1px solid #707070;
+        }
+
+        .tag_news {
+          color: #F70000;
+          border: 1px solid #F70000;
+        }
+
+        .date {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .about {
+    margin-bottom: 170px;
+
+    .about_content {
+      height: 520px;
+      background-image: url(bg_about.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+
+      .container {
+        p {
+          padding-top: 180px;
+          margin-bottom: 70px;
+          float: right;
+          font-size: 30px;
+          line-height: 50px;
+          text-shadow:1px 1px 8px #fff;
+        }
+        .btn_more {
+          margin-right: 20px;
+          float: right;
+        }
+      }
+    }
+  }
+
+  .activity {
+    margin-bottom: 170px;
+
+    .activity_list li {
+      display: flex;
+      justify-content: space-between;
+      min-height: 300px;
+      margin-bottom: 12px;
+
+      &:nth-of-type(2) {
+        .left {
+          order: 2;
+
+          .activity_img {
+            float: left;
+          }
+        }
+        .right {
+          order: 1;
+        }
+      }
+      .left {
+        width: 33%;
+        background-color: #C9E9FF;
+
+        .activity_img {
+          width: 100%;
+          max-width: 410px;
+          float: right;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .right {
+        width: 66%;
+        padding: 50px 60px 0;
+        background-color: $blue;
+        color: #fff;
+
+        .activity_name {
+          padding: 0 14px;
+          margin-bottom: 46px;
+          font-size: 32px;
+          border-left: 2px solid #F70000;
+        }
+        p {
+          margin-bottom: 24px;
+          font-size: 20px;
+          font-weight: 300;
+          line-height: 36px;
+        }
+        .btn_more {
+          width: 230px;
+          height: 40px;
+          padding: 6px 0;
+          font-size: 16px;
+          color: #fff;
+          border-radius: 20px;
+          border-color: #fff;
+
+          &:hover {
+            color: $blue;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// レスポンシブ
+@media screen and (max-width: 959px) {
+  #home {
+    .section_title {
+      font-size: 24px;
+
+      span {
+        font-size: 14px;
+      }
+    }
+    .btn_more {
+      width: 160px;
+      height: 40px;
+      padding: 8px 0;
+      margin: 0 auto;
+      font-size: 14px;
+
+      span {
+        top: 52%;
+        right: 20px;
+      }
+    }
+    .top_view {
+      height: 450px;
+      margin-bottom: 60px;
+
+      h1 {
+        padding-top: 160px;
+        font-size: 24px;
+        line-height: 36px;
+      }
+    }
+    .event {
+      margin-bottom: 60px;
+
+      .event_list {
+        margin-bottom: 0;
+
+        li {
+          margin-bottom: 30px;
+
+          .tag {
+            padding: 3px 15px;
+            font-size: 11px;
+          }
+          .date {
+            font-size: 14px;
+          }
+          .event_title {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .about {
+      margin-bottom: 60px;
+
+      .about_content {
+        height: auto;
+        background-image: none;
+
+        img {
+          width: 100%;
+        }
+        .container {
+          p {
+            padding-top: 30px;
+            margin-bottom: 20px;
+            font-size: 22px;
+          }
+          .btn_more {
+            margin: 0;
+          }
+        }
+      }
+    }
+    .activity {
+      margin-bottom: 60px;
+      
+      .activity_list {
+        background-color: $blue;
+
+        li {
+          flex-direction: column;
+
+          &:nth-of-type(2) {
+            .left {
+              order: 1;
+            }
+            .right {
+              order: 2;
+            }
+          }
+          .left {
+            width: 100%;
+            padding: 20px 30px 0;
+            background-color: $blue;
+
+            .activity_img {
+              max-width: initial;
+              float: none;
+            }
+          }
+          .right {
+            width: 100%;
+            padding: 20px 30px;
+
+            .activity_name {
+              margin-bottom: 20px;
+              font-size: 24px;
+              border-left: 1px solid #F70000;
+            }
+            p {
+              font-size: 16px;
+              line-height: 26px;
+            }
+            .btn_more {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
