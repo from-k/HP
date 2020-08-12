@@ -1,9 +1,10 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
 // top
-
-
 #home {
   .top_view {
     height: 650px;
@@ -181,6 +182,59 @@
   }
 }
 
+// about
+#about {
+  .page_title {
+    background-image: image-url("page_title_about.png");
+  }
+  .text {
+    width: 660px;
+    padding: 46px 50px;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #EFEFEF;
+    z-index: 1;
+
+    h2 {
+      margin-bottom: 50px;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 50px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 34px;
+    }
+  }
+  .mission {
+    margin-bottom: 350px;
+    position: relative;
+
+    img {
+      width: 650px;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      z-index: 0;
+    }
+  }
+  .vision {
+    margin-bottom: 400px;
+    position: relative;
+
+    .text {
+      float: right;
+    }
+    img {
+      width: 830px;
+      position: absolute;
+      top: 150px;
+      left: 0;
+      z-index: 0;
+    }
+  }
+}
+
 
 
 // レスポンシブ
@@ -307,4 +361,41 @@
       }
     }
   }
+  #about {
+    .text {
+      width: 100%;
+      padding: 30px 20px 20px;
+
+      h2 {
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 30px;
+      }
+      p {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 22px;
+      }
+    }
+    .mission {
+      width: 100%;
+      margin-bottom: 50px;
+
+      img {
+        width: 100%;
+        position: initial;
+      }
+    }
+    .vision {
+      width: 100%;
+      margin-bottom: 50px;
+
+      img {
+        width: 100%;
+        position: initial;
+      }
+    }
+  }
+
+
 }
