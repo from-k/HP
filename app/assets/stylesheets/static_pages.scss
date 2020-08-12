@@ -235,6 +235,62 @@
   }
 }
 
+// activity
+#activity {
+  .page_title {
+    background-image: image-url("page_title_activity.png");
+  }
+  .activity_list {
+    margin-bottom: 180px;
+
+    li {
+      display: flex;
+      margin-bottom: 120px;
+
+      &:nth-of-type(2) {
+        .left {
+          order: 2;
+        }
+      }
+      .left {
+        width: 400px;
+        position: relative;
+
+        .square {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 25px;
+          left: 25px;
+          background-color: #C9E9FF;
+          z-index: -1;
+        }
+        img {
+          width: 100%;
+        }
+      }
+      .right {
+        padding: 20px 60px;
+        flex: 1;
+
+        .activity_number {
+          margin-bottom: 10px;
+          font-size: 22px;
+        }
+        h2 {
+          margin-bottom: 30px;
+          font-size: 32px;
+          color: $blue;
+        }
+        p {
+          font-size: 20px;
+          line-height: 34px;
+        }
+      }
+    }
+  }
+}
+
 
 
 // レスポンシブ
@@ -361,6 +417,7 @@
       }
     }
   }
+
   #about {
     .text {
       width: 100%;
@@ -397,5 +454,48 @@
     }
   }
 
+  #activity {
+    .activity_list {
+      margin-bottom: 80px;
+      
+      li {
+        flex-direction: column;
+        margin-bottom: 40px;
+
+        &:nth-of-type(2) {
+          .left {
+            order: 1;
+          }
+          .right {
+            order: 2;
+          }
+        }
+
+        .left {
+          width: 100%;
+
+          .square {
+            display: none;
+          }
+        }
+        .right {
+          width: 100%;
+          padding: 20px 0;
+
+          .activity_number {
+            font-size: 10px;
+          }
+          h2 {
+            font-size: 20px;
+            font-weight: 400;
+          }
+          p {
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
 
 }
