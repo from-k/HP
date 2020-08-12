@@ -1,0 +1,161 @@
+<div id="events" class="main">
+  <%= render "page_title", page_title: "活動実績" %>
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a href="#all" class="nav-link active" data-toggle="tab">ALL</a>
+      </li>
+      <li class="nav-item">
+        <a href="#past_event" class="nav-link" data-toggle="tab">イベント</a>
+      </li>
+      <li class="nav-item">
+        <a href="#news" class="nav-link" data-toggle="tab">お知らせ</a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="all" class="tab-pane active">
+        <ul class="event_list row">
+          <li class="col-md-4">
+            <div class="event_image">
+              <%= link_to image_tag("noimage.png"), event_4_path %>
+            </div>
+            <div class="flex">
+              <div class="tag tag_event">
+                イベント
+              </div>
+              <div class="date">
+                2020.07.01
+              </div>
+            </div>
+            <div class="event_title">
+              <%= link_to "就活なんでも相談会", event_4_path %>
+            </div>
+          </li>
+          <li class="col-md-4">
+            <div class="event_image">
+              <%= link_to image_tag("event3.png"), event_3_path %>
+            </div>
+            <div class="flex">
+              <div class="tag tag_event">
+                イベント
+              </div>
+              <div class="date">
+                2020.01.24
+              </div>
+            </div>
+            <div class="event_title">
+              <%= link_to "東京就活考えている人が集まる会、大手企業志望者が集まる会", event_3_path %>
+            </div>
+          </li>
+          <li class="col-md-4">
+            <div class="event_image">
+              <%= link_to image_tag("event2.png"), event_2_path %>
+            </div>
+            <div class="flex">
+              <div class="tag tag_event">
+                イベント
+              </div>
+              <div class="date">
+                2019.12.14
+              </div>
+            </div>
+            <div class="event_title">
+              <%= link_to "内定者交流会", event_2_path %>
+            </div>
+          </li>
+          <li class="col-md-4">
+            <div class="event_image">
+              <%= link_to image_tag("event1.png"), event_1_path %>
+            </div>
+            <div class="flex">
+              <div class="tag tag_event">
+                イベント
+              </div>
+              <div class="date">
+                2019.12.14
+              </div>
+            </div>
+            <div class="event_title">
+              <%= link_to "人気企業若手社員とのプレミアム交流会", event_1_path %>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="past_event" class="tab-pane">
+        <ul class="event_list row">
+          <li class="col-md-4">
+            <div class="event_image">
+              <%= link_to image_tag("noimage.png"), event_4_path %>
+            </div>
+            <div class="flex">
+              <div class="tag tag_event">
+                イベント
+              </div>
+              <div class="date">
+                2020.07.01
+              </div>
+            </div>
+            <div class="event_title">
+              <%= link_to "就活なんでも相談会", event_4_path %>
+            </div>
+          </li>
+          <li class="col-md-4">
+            <div class="event_image">
+              <%= link_to image_tag("event3.png"), event_3_path %>
+            </div>
+            <div class="flex">
+              <div class="tag tag_event">
+                イベント
+              </div>
+              <div class="date">
+                2020.01.24
+              </div>
+            </div>
+            <div class="event_title">
+              <%= link_to "東京就活考えている人が集まる会、大手企業志望者が集まる会", event_3_path %>
+            </div>
+          </li>
+          <li class="col-md-4">
+            <div class="event_image">
+              <%= link_to image_tag("event2.png"), event_2_path %>
+            </div>
+            <div class="flex">
+              <div class="tag tag_event">
+                イベント
+              </div>
+              <div class="date">
+                2019.12.14
+              </div>
+            </div>
+            <div class="event_title">
+              <%= link_to "内定者交流会", event_2_path %>
+            </div>
+          </li>
+          <li class="col-md-4">
+            <div class="event_image">
+              <%= link_to image_tag("event1.png"), event_1_path %>
+            </div>
+            <div class="flex">
+              <div class="tag tag_event">
+                イベント
+              </div>
+              <div class="date">
+                2019.12.14
+              </div>
+            </div>
+            <div class="event_title">
+              <%= link_to "人気企業若手社員とのプレミアム交流会", event_1_path %>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="news" class="tab-pane">
+        <ul class="event_list row">
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <%= render "contact_area" %>
+</div>

@@ -4,7 +4,7 @@
     <br>将来の選択肢を提供して視野を広げる</h1>
   </div>
 
-  <div class="event">
+  <div class="events">
     <div class="container">
       <h2 class="section_title">
         EVENT<span>活動実績</span>
@@ -12,7 +12,7 @@
       <ul class="event_list row">
         <li class="col-md-4">
           <div class="event_image">
-            <%= image_tag "noimage.png" %>
+            <%= link_to image_tag("noimage.png"), event_4_path %>
           </div>
           <div class="flex">
             <div class="tag tag_event">
@@ -23,12 +23,12 @@
             </div>
           </div>
           <div class="event_title">
-            就活なんでも相談会
+            <%= link_to "就活なんでも相談会", event_4_path %>
           </div>
         </li>
         <li class="col-md-4">
           <div class="event_image">
-            <%= image_tag "event2.png" %>
+            <%= link_to image_tag("event3.png"), event_3_path %>
           </div>
           <div class="flex">
             <div class="tag tag_event">
@@ -39,12 +39,12 @@
             </div>
           </div>
           <div class="event_title">
-            東京就活考えている人が集まる会、大手企業志望者が集まる会
+            <%= link_to "東京就活考えている人が集まる会、大手企業志望者が集まる会", event_3_path %>
           </div>
         </li>
         <li class="col-md-4">
           <div class="event_image">
-            <%= image_tag "event3.png" %>
+            <%= link_to image_tag("event2.png"), event_2_path %>
           </div>
           <div class="flex">
             <div class="tag tag_event">
@@ -55,11 +55,13 @@
             </div>
           </div>
           <div class="event_title">
-            内定者交流会
+            <%= link_to "内定者交流会", event_2_path %>
           </div>
         </li>
       </ul>
-      <a href="#" class="btn_more">View more<span>＞</span></a>
+      <%= link_to events_path, class: "btn_more" do %>
+        View more<span>＞</span>
+      <% end %>
     </div>
   </div>
 

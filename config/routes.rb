@@ -5,5 +5,9 @@ Rails.application.routes.draw do
   # static_pages
   get "/about", to: "static_pages#about"
   get "/activity", to: "static_pages#activity"
-  get "/event", to: "static_pages#event"
+  get "/events", to: "static_pages#events"
+  get "/event/1", to: "static_pages#event1"
+  get "/event/2", to: "static_pages#event2"
+  get "/event/3", to: "static_pages#event3"
+  get "/event/4", to: "static_pages#event4"
 end
