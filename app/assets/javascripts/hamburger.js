@@ -1,7 +1,5 @@
-(function($) {
-    $(function () {
-      $('#nav-toggle').on('click', function() {
-        $('body').toggleClass('open');
-      });
-    });
-})(jQuery);
+$(document).on("turbolinks:load", function() {
+  $('#nav-toggle').on('click', function() {
+    $('body').toggleClass('open');
+  });
+});
