@@ -20,5 +20,7 @@ module Myapp
     config.i18n.default_locale = :ja
     # config/localesの読み込み
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
+    # タイムゾーンを日本に
+    config.time_zone = 'Tokyo'
   end
 end

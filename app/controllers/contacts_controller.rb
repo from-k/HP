@@ -8,6 +8,12 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     @contact.status = 1
     if @contact.save
+      notifier = Slack::Notifier.new(
+        "https://hooks.slack.com/services/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",
+        channel: "#お問い合わせ"
+      )
+      contact_form = "日時:#{@contact.created_at}\n企業名/団体名:#{@contact.company}\n担当:#{@contact.name}\nメールアドレス:#{@contact.email}\nお問い合わせ内容:#{@contact.content}"
+      notifier.ping contact_form
       flash[:success] = "お問い合わせの送信が完了しました。"
       redirect_to contact_path
     else

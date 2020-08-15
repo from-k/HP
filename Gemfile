@@ -51,6 +51,8 @@ gem 'jquery-rails', '4.3.1'
 gem 'popper_js', '1.16.0'
 gem 'jquery-turbolinks'
 gem 'rails-i18n'
+gem 'slack-notifier'
+gem 'dotenv'
 
 
 group :development, :test do
