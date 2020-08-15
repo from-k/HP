@@ -2,9 +2,9 @@
   <div class="container">
     <p>from Kでは、学生の皆様からの気軽な質問や、
     <br class="pc_only">企業様からのご提案などを幅広く受け付けております。</p>
-    <a href="#" class="btn_contact">
-      <%= image_tag "mail.png", width: 33 %>
-      お問い合わせフォーム
-    </a>
+    <%= link_to contact_path, class: "btn_contact" do %>
+    <%= image_tag "mail.png", width: 33 %>
+    お問い合わせフォーム
+    <% end %>
   </div>
 </div>

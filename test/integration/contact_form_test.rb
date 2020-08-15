@@ -5,7 +5,7 @@ class ContactFormTest < ActionDispatch::IntegrationTest
   def setup
     ActionMailer::Base.deliveries.clear
   end
-  
+
   test "invalid contact information" do
     get contact_path
     assert_no_difference "Contact.count" do
@@ -27,7 +27,8 @@ class ContactFormTest < ActionDispatch::IntegrationTest
                             content: "お問い合わせしてみました"}}
     end
     @contact = assigns(:contact)
-    assert_equal 0, @contact.status
+    assert_equal 1, @contact.status
+    follow_redirect!
     assert_template "contacts/new"
     assert_not flash.empty?
   end
