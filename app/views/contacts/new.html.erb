@@ -1,0 +1,72 @@
+<div id="contact" class="main">
+  <%= render "static_pages/page_title", page_title: "お問い合わせ" %>
+  <div class="container">
+    <%= form_for(@contact, url: contact_path) do |f| %>
+      <%= render "shared/erroe_messages", object: f.object %>
+
+      <ul class="form_list">
+        <li>
+          <div class="left">
+            <p>企業名/団体名</p>
+          </div>
+          <div class="right">
+            <%= f.text_field :company %>
+          </div>
+        </li>
+        <li>
+          <div class="left">
+            <p>お名前/ご担当者名</p>
+          </div>
+          <div class="right">
+            <%= f.text_field :name %>
+          </div>
+        </li>
+        <li>
+          <div class="left">
+            <p>メールアドレス</p>
+          </div>
+          <div class="right">
+            <%= f.email_field :email %>
+          </div>
+        </li>
+        <li>
+          <div class="left">
+            <p>電話番号</p>
+          </div>
+          <div class="right">
+            <%= f.number_field :tel %>
+          </div>
+        </li>
+        <li>
+          <div class="left">
+            <p>from Kを知ったきっかけ</p>
+          </div>
+          <div class="right">
+            <div class="checkbox">
+              <%= f.radio_button :opportunity_to_know, 1 %>当ホームページ
+            </div>
+            <div class="checkbox">
+              <%= f.radio_button :opportunity_to_know, 2 %>Twitter
+            </div>
+            <div class="checkbox">
+              <%= f.radio_button :opportunity_to_know, 3 %>お知り合いから
+            </div>
+            <div class="checkbox">
+              <%= f.radio_button :opportunity_to_know, 4 %>その他
+            </div>
+            <%= f.text_field :opportunity_to_know_other %>
+          </div>
+        </li>
+        <li>
+          <div class="left">
+            <p>お問い合わせ内容</p>
+          </div>
+          <div class="right">
+            <%= f.text_area :content %>
+          </div>
+        </li>
+      </ul>
+      <%= f.submit "送信", class: "btn_submit" %>
+    <% end %>
+  </div>
+</div>

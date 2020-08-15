@@ -50,6 +50,12 @@ gem 'mini_magick', '4.7.0'
 gem 'jquery-rails', '4.3.1'
 gem 'popper_js', '1.16.0'
 gem 'jquery-turbolinks'
+<<<<<<< HEAD
+=======
+gem 'rails-i18n'
+gem 'slack-notifier'
+gem 'dotenv'
+>>>>>>> static_pages
 
 
 group :development, :test do

@@ -15,5 +15,12 @@ module Myapp
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    # バリデーションの日本語化
+    config.i18n.default_locale = :ja
+    # config/localesの読み込み
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
+    # タイムゾーンを日本に
+    config.time_zone = 'Tokyo'
   end
 end
