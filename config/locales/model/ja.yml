@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    models:
+      contact: お問い合わせ
+    attributes:
+      contact:
+        company: 企業名/団体名
+        name: お名前/ご担当者名
+        email: メールアドレス
+        tel: 電話番号
+        opportunity_to_know: from Kを知ったきっかけ
+        content: お問い合わせ内容
