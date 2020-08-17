@@ -36,23 +36,29 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-# Devise
-gem 'devise'
+
 
 # 追加分
 gem 'bootstrap', '~> 4.1.1'
 gem 'bcrypt', '3.1.15'
 gem 'faker',  '1.9.1'
+# ページネーション
 gem 'will_paginate',           '3.1.7'
 gem 'bootstrap-will_paginate', '1.0.0'
+# 画像処理
 gem 'carrierwave', '1.2.2'
 gem 'mini_magick', '4.7.0'
+# Jquery,javascript
 gem 'jquery-rails', '4.3.1'
 gem 'popper_js', '1.16.0'
 gem 'jquery-turbolinks'
+# 日本語化
 gem 'rails-i18n'
+# スラック通知
 gem 'slack-notifier'
 gem 'dotenv'
+# devise
+gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 
@@ -69,6 +75,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # メール確認
+  gem 'letter_opener_web'
 end
 
 group :test do
