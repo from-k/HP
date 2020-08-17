@@ -2,7 +2,7 @@
   <%= render "static_pages/page_title", page_title: "お問い合わせ" %>
   <div class="container">
     <%= form_for(@contact, url: contact_path) do |f| %>
-      <%= render "shared/erroe_messages", object: f.object %>
+      <%= render "shared/error_messages", resource: f.object %>
 
       <ul class="form_list">
         <li>
