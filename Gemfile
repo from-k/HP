@@ -53,6 +53,8 @@ gem 'jquery-turbolinks'
 gem 'rails-i18n'
 gem 'slack-notifier'
 gem 'dotenv'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 
 
 group :development, :test do

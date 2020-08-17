@@ -16,7 +16,7 @@ module Myapp
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
-    # バリデーションの日本語化
+    # 諸々の日本語化
     config.i18n.default_locale = :ja
     # config/localesの読み込み
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
