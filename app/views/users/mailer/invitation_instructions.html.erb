@@ -1,0 +1,13 @@
+<div id="mail_text">
+  <%= image_tag "favicon.png", width: 40 %>
+  <h1>from Kの管理ページへ参加する</h1>
+  <p>from Kの管理ページへの招待が届いています。</p>
+
+
+  <%= link_to "いますぐ参加", accept_invitation_url(@resource, invitation_token: @token), class: "btn_participation" %>
+
+  <!-- <% if @resource.invitation_due_at %>
+    <p><%= t("devise.mailer.invitation_instructions.accept_until", due_date: l(@resource.invitation_due_at, format: :'devise.mailer.invitation_instructions.accept_until_format')) %></p>
+  <% end %> -->
+
+</div>
