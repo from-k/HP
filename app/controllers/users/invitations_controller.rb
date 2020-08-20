@@ -1,26 +1,11 @@
 class Users::InvitationsController < Devise::InvitationsController
   def new
-    super
+    self.resource = resource_class.new
+    render :layout => "admins"
   end
 
   def create
-    self.resource = invite_resource
-    resource_invited = resource.errors.empty?
-
-    yield resource if block_given?
-
-    if resource_invited
-      if is_flashing_format? && self.resource.invitation_sent_at
-        set_flash_message :notice, :send_instructions, email: self.resource.email
-      end
-      if self.method(:after_invite_path_for).arity == 1
-        respond_with resource, location: after_invite_path_for(current_inviter)
-      else
-        respond_with resource, location: after_invite_path_for(current_inviter, resource)
-      end
-    else
-      respond_with_navigational(resource) { render :new }
-    end
+    super
   end
 
   def edit
@@ -34,4 +19,15 @@ class Users::InvitationsController < Devise::InvitationsController
   def destroy
     super
   end
+
+
+  private
+
+    def after_invite_path_for(inviter, invitee = nil)
+      new_user_invitation_path
+    end
+
+    def after_accept_path_for(resource)
+      admins_contacts_path
+    end
 end

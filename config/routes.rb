@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations',
     confirmations: 'users/confirmations',
-    invitations: 'users/invitations' 
+    invitations: 'users/invitations'
   }
 
   root "static_pages#home"
@@ -19,9 +19,10 @@ Rails.application.routes.draw do
   get "/event/2", to: "static_pages#event2"
   get "/event/3", to: "static_pages#event3"
   get "/event/4", to: "static_pages#event4"
-  # contact
-  get 'contacts/new'
-  get 'contacts/create'
+  # admins
+  namespace :admins do
+    resources :contacts, only: [:index, :show]
+  end
   # letter_opener
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: '/letter_opener'

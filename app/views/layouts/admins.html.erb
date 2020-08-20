@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= render "layouts/head" %>
+  </head>
+
+  <body>
+    <%= render "layouts/flash" %>
+    <div id="admins">
+      <div class="side_menu">
+        <%= image_tag "logo2.png", class: "admins_logo" %>
+        <ul class="side_menu_list">
+          <li>
+            <%= image_tag "icon_event.png" %>イベント
+          </li>
+          <li>
+            <%= image_tag "icon_contact.png" %><%= link_to "お問い合わせ", admins_contacts_path %>
+          </li>
+          <li>
+            <%= image_tag "icon_member.png" %>メンバー
+          </li>
+          <li class="sub_menu">
+            <%= link_to "メンバー招待", new_user_invitation_path %>
+          </li>
+          <div class="sepalate"></div>
+          <li>
+            <%= image_tag "icon_logout.png" %><%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          </li>
+        </ul>
+      </div>
+
+      <div class="admins_main">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
