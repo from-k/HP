@@ -42,9 +42,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   protected
 
     def permit_first_user
-      if User.count == 0
-        redirect_to new_user_registration_path
-      else
+      unless User.count == 0
         redirect_to root_path
       end
     end
