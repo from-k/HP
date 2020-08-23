@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get "/event/4", to: "static_pages#event4"
   # admins
   namespace :admins do
-    resources :contacts, only: [:index, :show]
+    resources :contacts, only: [:index, :show, :update]
   end
   # letter_opener
   if Rails.env.development?

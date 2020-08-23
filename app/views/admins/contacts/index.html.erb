@@ -1,2 +1,20 @@
-<h1>Admins::Contacts#index</h1>
-<p>Find me in app/views/admins/contacts/index.html.erb</p>
+<h1 class="section_title">お問い合わせ一覧</h1>
+<ul class="contact_list contact_list_title">
+  <li>
+    <p class="company">
+      企業名/団体名
+    </p>
+    <p class="name">
+      お名前/ご担当者名
+    </p>
+    <p class="email">
+      メールアドレス
+    </p>
+    <p class="status">
+      対応状況
+    </p>
+  </li>
+</ul>
+<ul class="contact_list">
+  <%= render @contacts %>
+</ul>

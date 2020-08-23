@@ -1,2 +1,58 @@
-<h1>Admins::Contacts#show</h1>
-<p>Find me in app/views/admins/contacts/show.html.erb</p>
+<h1 class="section_title">
+  お問い合わせ情報
+</h1>
+<div class="contact_content">
+  <ul class="contact_info">
+    <li>
+      <div class="left">
+        企業名/団体名
+      </div>
+      <div class="right">
+        <%= @contact.company %>
+      </div>
+    </li>
+    <li>
+      <div class="left">
+        お名前/ご担当者名
+      </div>
+      <div class="right">
+        <%= @contact.name %>
+      </div>
+    </li>
+    <li>
+      <div class="left">
+        電話番号
+      </div>
+      <div class="right">
+        <%= @contact.tel %>
+      </div>
+    </li>
+    <li>
+      <div class="left">
+        from Kを知ったきっかけ
+      </div>
+      <div class="right">
+        <%= contact_opportunity_to_know(@contact.opportunity_to_know) %>
+        <% unless @contact.opportunity_to_know_other.nil? %>
+          <p><%= @contact.opportunity_to_know_other %></p>
+        <% end %>
+      </div>
+    </li>
+    <li>
+      <div class="left">
+        対応状況
+      </div>
+      <div id="contact_status" class="right">
+        <%= render "contact_status" %>
+      </div>
+    </li>
+    <li>
+      <div class="left">
+        お問い合わせ内容
+      </div>
+      <div class="right">
+        <%= @contact.content %>
+      </div>
+    </li>
+  </ul>
+</div>

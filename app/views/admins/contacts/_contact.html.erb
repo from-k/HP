@@ -1,0 +1,14 @@
+<li>
+  <p class="company">
+    <%= link_to contact.company, admins_contact_path(contact) %>
+  </p>
+  <p class="name">
+    <%= contact.name %>
+  </p>
+  <p class="email">
+    <%= contact.email %>
+  </p>
+  <p class="status">
+    <%= contact_status(contact.status) %>
+  </p>
+</li>

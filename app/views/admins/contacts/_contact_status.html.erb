@@ -1,0 +1,4 @@
+<%= form_with model: @contact, url: admins_contact_path, id: "contact_status_form" do |f| %>
+  <%= f.select :status, [["未対応", 1], ["対応中", 2], ["対応済み", 3]],
+   {:selected => @contact.status}, id: "select_status" %>
+<% end %>
