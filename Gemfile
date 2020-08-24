@@ -62,6 +62,9 @@ gem 'devise'
 gem 'devise_invitable', '~> 2.0.0'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+# wysiwyg
+gem 'trix'
+
 
 
 group :development, :test do
