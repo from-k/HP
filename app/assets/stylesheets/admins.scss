@@ -1,8 +1,8 @@
 .admins_main {
   padding-top: 24px;
 
-  .section_title {
-    padding: 0 40px 24px;
+  .admins_title {
+    padding-bottom: 24px;
   }
   .field {
     margin-bottom: 10px;
@@ -73,7 +73,7 @@
       background-color: #f8f7fa;
     }
     .contact_info {
-      padding: 20px 30px;
+      padding: 20px 0;
 
       li {
         display: flex;

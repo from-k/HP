@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   # admins
   namespace :admins do
     resources :contacts, only: [:index, :show, :update]
-    resources :events
+    resources :events, except: [:show]
   end
   # letter_opener
   if Rails.env.development?

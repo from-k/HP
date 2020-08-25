@@ -10,6 +10,9 @@ class AdminsEventsTestTest < ActionDispatch::IntegrationTest
 
   test "admins event layouts" do
     sign_in(@user)
+    get admins_events_path
+    assert_template "admins/events/index"
+    assert_select "li", @event.title
     get new_admins_event_path
     assert_template "admins/events/new"
     assert_select "form.events_form"
@@ -21,8 +24,7 @@ class AdminsEventsTestTest < ActionDispatch::IntegrationTest
     assert_no_difference "Event.count" do
       post admins_events_path, params: {event: {title: "", content: "",
                                                 event_image: "", holded_at: nil,
-                                                tag: nil}},
-                                xhr: true
+                                                tag: nil}}
     end
   end
 

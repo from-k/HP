@@ -7,10 +7,6 @@ class Admins::EventsController < ApplicationController
 
   end
 
-  def show
-
-  end
-
   def new
     @event = Event.new
   end

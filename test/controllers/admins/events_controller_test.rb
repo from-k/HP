@@ -5,14 +5,9 @@ class Admins::EventsControllerTest < ActionDispatch::IntegrationTest
   def setup
     @event = events(:test_event)
   end
-  
+
   test "should redirect index when not login" do
     get admins_events_path
-    assert_redirected_to new_user_session_path
-  end
-
-  test "should redirect show when not login" do
-    get admins_event_path(@event)
     assert_redirected_to new_user_session_path
   end
 
