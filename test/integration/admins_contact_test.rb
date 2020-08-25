@@ -5,7 +5,7 @@ class AdminsContactTest < ActionDispatch::IntegrationTest
 
   def setup
     @user = users(:fromk)
-    @contact = contacts(:test_company)
+    @contact = contacts(:test_contact)
   end
 
   test "admins contact layouts" do
@@ -19,7 +19,7 @@ class AdminsContactTest < ActionDispatch::IntegrationTest
     # 対応状況の更新
     patch admins_contact_path(@contact), params: {contact: {status: 2}},
                  headers: { "HTTP_REFERER" => admins_contact_path(@contact) },
-                 :xhr => true
+                 xhr: true
     assert_not flash.empty?
     # assert_template "admins/contacts/show"
     @contact.reload

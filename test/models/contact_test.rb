@@ -14,30 +14,57 @@ class ContactTest < ActiveSupport::TestCase
     assert @contact.valid?
   end
 
-  test "item should be present" do
+  test "company should be present" do
     @contact.company = "  "
     assert_not @contact.valid?
+  end
+
+  test "name should be present" do
     @contact.name = "  "
     assert_not @contact.valid?
+  end
+
+  test "email should be present" do
     @contact.email = "  "
     assert_not @contact.valid?
+  end
+
+  test "opportunity_to_know should be present" do
     @contact.opportunity_to_know = "  "
     assert_not @contact.valid?
+  end
+
+  test "content should be present" do
     @contact.content = "  "
     assert_not @contact.valid?
   end
 
-  test "item should not be too long" do
+  test "company should not be too long" do
     @contact.company = "a" * 51
     assert_not @contact.valid?
+  end
+
+  test "name should not be too long" do
     @contact.name = "a" * 51
     assert_not @contact.valid?
+  end
+
+  test "email should not be too long" do
     @contact.email = "a" * 51 + "@text.com"
     assert_not @contact.valid?
+  end
+
+  test "tel should not be too long" do
     @contact.tel = "a" * 255
     assert_not @contact.valid?
+  end
+
+  test "opportunity_to_know should not be too long" do
     @contact.opportunity_to_know_other = "a" * 51
     assert_not @contact.valid?
+  end
+
+  test "content should not be too long" do
     @contact.content = "a" * 1001
     assert_not @contact.valid?
   end

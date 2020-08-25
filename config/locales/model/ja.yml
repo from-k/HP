@@ -2,6 +2,7 @@ ja:
   activerecord:
     models:
       contact: お問い合わせ
+      event: イベント
     attributes:
       contact:
         company: 企業名/団体名
@@ -10,3 +11,8 @@ ja:
         tel: 電話番号
         opportunity_to_know: from Kを知ったきっかけ
         content: お問い合わせ内容
+      event:
+        title: タイトル
+        content: イベント内容
+        holded_at: 開催日時
+        tag: タグ

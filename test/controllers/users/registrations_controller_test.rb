@@ -11,6 +11,6 @@ class Users::RegistrationsControllerTest < ActionDispatch::IntegrationTest
     test "should get new when User.count == 0" do
       User.first.destroy
       get new_user_registration_path
-      assert_redirected_to new_user_registration_path
+      assert_response :success
     end
 end
