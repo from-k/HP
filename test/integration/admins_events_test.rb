@@ -53,6 +53,8 @@ class AdminsEventsTestTest < ActionDispatch::IntegrationTest
 
   test "update event with valid information" do
     sign_in(@user)
+    get admins_events_path
+    assert_select "a", "編集"
     get edit_admins_event_path(@event)
     title = "変更祭り"
     content = "変更しました"
@@ -68,5 +70,15 @@ class AdminsEventsTestTest < ActionDispatch::IntegrationTest
     # assert_equal event_image, @event.reload.event_image
     assert_equal holded_at, @event.reload.holded_at
     assert_equal tag, @event.reload.tag
+  end
+
+  test "delete event" do
+    sign_in(@user)
+    get admins_events_path
+    assert_select "a", "削除"
+    assert_difference "Event.count", -1 do
+      delete admins_event_path(@event), xhr: true
+    end
+    get admins_events_path
   end
 end

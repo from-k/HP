@@ -36,7 +36,12 @@ class Admins::EventsController < ApplicationController
   end
 
   def destroy
-
+    @events = Event.all
+    Event.find(params[:id]).destroy
+    flash[:sucsecc] = "記事を削除しました"
+    respond_to do |format|
+      format.js
+    end
   end
 
 
