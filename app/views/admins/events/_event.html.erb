@@ -14,7 +14,7 @@
     <div class="event_links">
       <%= link_to "編集", edit_admins_event_path(event), class: "edit" %>
       <%= link_to "削除", admins_event_path(event),
-      method: :delete, class: "delete" %>
+      method: :delete, remote: true, class: "delete" %>
     </div>
   </li>
 </ul>

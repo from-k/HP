@@ -53,21 +53,19 @@ class AdminsEventsTestTest < ActionDispatch::IntegrationTest
 
   test "update event with valid information" do
     sign_in(@user)
-    get edit_admins_event_path
+    get edit_admins_event_path(@event)
     title = "変更祭り"
     content = "変更しました"
-    event_image = "test.png"
-    holded_at = Time.zone.now
+    holded_at = Date.today
     tag = 2
     patch admins_event_path, params: {event: {title: title,
                                               content: content,
-                                              event_image: event_image,
                                               holded_at: holded_at,
                                               tag: tag}}
     assert_redirected_to admins_events_path
     assert_equal title, @event.reload.title
     assert_equal content, @event.reload.content
-    assert_equal event_image, @event.reload.event_image
+    # assert_equal event_image, @event.reload.event_image
     assert_equal holded_at, @event.reload.holded_at
     assert_equal tag, @event.reload.tag
   end
