@@ -1,0 +1,4 @@
+<%= render "shared/admins_title", title: "記事編集" %>
+<div class="container">
+  <%= render "events_form", model: @event, url: admins_event_path(@event) %>
+</div>

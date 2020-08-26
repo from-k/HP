@@ -4,7 +4,7 @@ class Admins::EventsController < ApplicationController
   layout "admins"
 
   def index
-
+    @events = Event.all
   end
 
   def new
@@ -22,11 +22,17 @@ class Admins::EventsController < ApplicationController
   end
 
   def edit
-
+    @event = Event.find(params[:id])
   end
 
   def update
-
+    @event = Event.find(params[:id])
+    if @event.update_attributes(event_params)
+      flash[:success] = "記事を更新しました"
+      redirect_to admins_events_path
+    else
+      render "admins/events/edit"
+    end
   end
 
   def destroy

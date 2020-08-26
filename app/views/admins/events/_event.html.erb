@@ -1,0 +1,20 @@
+<ul class="event_list">
+  <li>
+    <div class="flex">
+      <p class="title">
+        <%= event.title %>
+      </p>
+      <p class="tag">
+        <%= event_tag(event.tag) %>
+      </p>
+      <p class="updatee_at">
+        <%= event.updated_at.strftime("%Y年 %m月 %d日") %>
+      </p>
+    </div>
+    <div class="event_links">
+      <%= link_to "編集", edit_admins_event_path(event), class: "edit" %>
+      <%= link_to "削除", admins_event_path(event),
+      method: :delete, class: "delete" %>
+    </div>
+  </li>
+</ul>

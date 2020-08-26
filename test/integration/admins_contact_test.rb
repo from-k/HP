@@ -12,7 +12,6 @@ class AdminsContactTest < ActionDispatch::IntegrationTest
     sign_in(@user)
     get admins_contacts_path
     assert_template "admins/contacts/index"
-    assert_select "li", @contact.company
     get admins_contact_path(@contact)
     assert_template "admins/contacts/show"
     assert_select "ul.contact_info"

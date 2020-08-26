@@ -2,6 +2,7 @@ require_relative 'boot'
 
 require 'rails/all'
 
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -24,5 +25,7 @@ module Myapp
     config.time_zone = 'Tokyo'
     # 認証トークンをremoteフォームに埋め込む
     config.action_view.embed_authenticity_token_in_remote_forms = true
+    # キャリアウェーブの読み込み
+    config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')] 
   end
 end

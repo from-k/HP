@@ -1,1 +1,17 @@
 <%= render "shared/admins_title", title: "記事一覧" %>
+<ul class="event_list event_list_title">
+  <li>
+    <p class="title">
+      タイトル
+    </p>
+    <p class="tag">
+      タグ
+    </p>
+    <p class="updatee_at">
+      最終更新日
+    </p>
+  </li>
+</ul>
+<ul class="event_list">
+  <%= render @events %>
+</ul>

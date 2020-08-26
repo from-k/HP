@@ -1,4 +1,4 @@
 <%= render "shared/admins_title", title: "記事作成" %>
 <div class="container">
-  <%= render "events_form" %>
+  <%= render "events_form", model: @event, url: admins_events_path %>
 </div>

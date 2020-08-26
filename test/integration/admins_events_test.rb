@@ -12,7 +12,6 @@ class AdminsEventsTestTest < ActionDispatch::IntegrationTest
     sign_in(@user)
     get admins_events_path
     assert_template "admins/events/index"
-    assert_select "li", @event.title
     get new_admins_event_path
     assert_template "admins/events/new"
     assert_select "form.events_form"
@@ -26,6 +25,7 @@ class AdminsEventsTestTest < ActionDispatch::IntegrationTest
                                                 event_image: "", holded_at: nil,
                                                 tag: nil}}
     end
+    assert_template "admins/events/new"
   end
 
   test "create event with valid information" do
@@ -40,5 +40,35 @@ class AdminsEventsTestTest < ActionDispatch::IntegrationTest
     end
     assert_not flash.empty?
     assert_redirected_to admins_events_path
+  end
+
+  test "update event with invalid information" do
+    sign_in(@user)
+    get edit_admins_event_path(@event)
+    patch admins_event_path, params: {event: {title: "", content: "",
+                                              event_image: "", holded_at: nil,
+                                              tag: nil}}
+    assert_template "admins/events/edit"
+  end
+
+  test "update event with valid information" do
+    sign_in(@user)
+    get edit_admins_event_path
+    title = "変更祭り"
+    content = "変更しました"
+    event_image = "test.png"
+    holded_at = Time.zone.now
+    tag = 2
+    patch admins_event_path, params: {event: {title: title,
+                                              content: content,
+                                              event_image: event_image,
+                                              holded_at: holded_at,
+                                              tag: tag}}
+    assert_redirected_to admins_events_path
+    assert_equal title, @event.reload.title
+    assert_equal content, @event.reload.content
+    assert_equal event_image, @event.reload.event_image
+    assert_equal holded_at, @event.reload.holded_at
+    assert_equal tag, @event.reload.tag
   end
 end
