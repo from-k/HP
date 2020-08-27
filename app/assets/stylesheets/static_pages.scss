@@ -424,6 +424,8 @@
   }
   .event_content {
     margin-bottom: 300px;
+    font-size: 22px;
+    line-height: 36px;
 
     .event_image {
       margin-bottom: 110px;
@@ -431,10 +433,6 @@
       img {
         width: 100%;
       }
-    }
-    .event_content p {
-      font-size: 22px;
-      line-height: 36px;
     }
   }
 }
