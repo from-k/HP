@@ -1,0 +1,28 @@
+<div id="event">
+  <%= render "static_pages/page_title", page_title: "活動実績" %>
+  <div class="container">
+    <div class="event_info">
+      <p class="date"><%= @event.holded_at %></p>
+      <h2 class="event_title"><%= @event.title %></h2>
+      <div class="tag tag_event">
+        <%= event_tag(@event.tag) %>
+      </div>
+    </div>
+
+    <div class="event_content">
+      <div class="event_image">
+        <% if @event.event_image? %>
+          <%= image_tag(@event.event_image.url) %>
+        <% else %>
+          <%= image_tag("noimage.png") %>
+        <% end %>
+      </div>
+      <div class="event_content">
+        <p>
+          <%= sanitize @event.content %>
+        </p>
+      </div>
+    </div>
+  </div>
+  <%= render "static_pages/contact_area" %>
+</div>

@@ -1,0 +1,35 @@
+<div id="events">
+  <%= render "static_pages/page_title", page_title: "活動実績" %>
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a href="#all" class="nav-link active" data-toggle="tab">ALL</a>
+      </li>
+      <li class="nav-item">
+        <a href="#past_event" class="nav-link" data-toggle="tab">イベント</a>
+      </li>
+      <li class="nav-item">
+        <a href="#news" class="nav-link" data-toggle="tab">お知らせ</a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="all" class="tab-pane active">
+        <ul class="event_list row">
+          <%= render @articles %>
+        </ul>
+      </div>
+      <div id="past_event" class="tab-pane">
+        <ul class="event_list row">
+          <%= render @events %>
+        </ul>
+      </div>
+      <div id="news" class="tab-pane">
+        <ul class="event_list row">
+          <%= render @news %>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <%= render "static_pages/contact_area" %>
+</div>
