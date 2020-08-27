@@ -48,6 +48,7 @@ gem 'bootstrap-will_paginate', '1.0.0'
 # 画像処理
 gem 'carrierwave', '1.2.2'
 gem 'mini_magick', '4.7.0'
+gem 'fog-aws'
 # Jquery,javascript
 gem 'jquery-rails', '4.3.1'
 gem 'popper_js', '1.16.0'
@@ -64,6 +65,8 @@ gem 'devise-i18n'
 gem 'devise-i18n-views'
 # wysiwyg
 gem 'trix'
+# 環境変数管理
+gem 'dotenv-rails'
 
 
 
